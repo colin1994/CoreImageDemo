@@ -1,0 +1,17 @@
+kernel vec4 mosaicKernel(sampler image, sampler maskImage, float radius, vec2 point, float maskWidth, float maskHeight)
+{
+    // 获取当前点坐标
+    vec2 textureCoordinate = destCoord();
+    // 计算当前点与传入点的距离
+    float distance = distance(textureCoordinate, point);
+    if (distance < radius) {
+        // 在处理范围内, 计算对应马赛克贴图中的位置
+        float resultX = mod(textureCoordinate.x, maskWidth);
+        float resultY = mod(textureCoordinate.y, maskHeight);
+        return sample(maskImage, samplerTransform(maskImage, vec2(resultX, resultY)));
+    }
+    else {
+        // 返回原图对应像素点色值
+        return sample(image, samplerTransform(image, textureCoordinate));
+    }
+}

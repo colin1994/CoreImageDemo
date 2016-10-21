@@ -1,0 +1,11 @@
+kernel vec2 pixellateKernel(float radius)
+{
+    vec2 positionOfDestPixel, centerPoint;
+    // 获取当前点坐标
+    positionOfDestPixel = destCoord();
+    // 获取对应晶格内的中心像素点
+    centerPoint.x = positionOfDestPixel.x - mod(positionOfDestPixel.x, radius * 2.0) + radius;
+    centerPoint.y = positionOfDestPixel.y - mod(positionOfDestPixel.y, radius * 2.0) + radius;
+
+    return centerPoint;
+}
