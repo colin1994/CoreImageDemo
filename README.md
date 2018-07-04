@@ -1,11 +1,23 @@
-# Core Image 学习总结
+# Core Image 系列教程
+
+> 这是我的小专栏 [iOS 图像处理](https://xiaozhuanlan.com/colin) 对应的源码。欢迎订阅，配合教程看效果更佳~
 
 
 
-最近在研究 Core Image 自定义 Filter 相关内容，重新学习了 Core Image，对 Core Image 的一些优化点也有了一定的了解。故此记录，与君交流~
+Core Image 系列，目前的文章如下：
 
-* [Core Image 你需要了解的那些事~](http://colin1994.github.io/2016/10/21/Core-Image-OverView/)
-* [Core Image 之自定义 Filter~](http://colin1994.github.io/2016/10/21/Core-Image-Custom-Filter/)
+- Core Image【1】—— 概述
+- Core Image【2】—— 自定义 Filter
+- Core Image【3】—— 2017 新特性
+- Core Image【4】—— 2018 新特性
+
+> PS：
+>
+> 如果想了解 Core Image 相关，建议按序阅读，前后有依赖。
+
+------
+
+
 
 这个工程分别演示了 CIColorKernel，CIWarpKernel，CIKernel 的具体用法，另外附带了眼睛放大对应的 QC 文件。
 

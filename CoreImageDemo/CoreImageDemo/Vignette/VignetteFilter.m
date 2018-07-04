@@ -24,12 +24,11 @@ static CIColorKernel *customKernel = nil;
     self = [super init];
     
     if (self) {
-        
         if (customKernel == nil)
         {
             NSBundle *bundle = [NSBundle bundleForClass: [self class]];
             NSURL *kernelURL = [bundle URLForResource:@"Vignette" withExtension:@"cikernel"];
-            
+
             NSError *error;
             NSString *kernelCode = [NSString stringWithContentsOfURL:kernelURL
                                                             encoding:NSUTF8StringEncoding error:&error];
@@ -39,7 +38,7 @@ static CIColorKernel *customKernel = nil;
                       [error localizedDescription]);
                 abort();
             }
-            
+
             NSArray *kernels = [CIColorKernel kernelsWithString:kernelCode];
             customKernel = [kernels objectAtIndex:0];
         }

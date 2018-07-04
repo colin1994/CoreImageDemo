@@ -18,6 +18,9 @@
 		3B429BE41DAE045000B56070 /* Mosaic.cikernel in Resources */ = {isa = PBXBuildFile; fileRef = 3B429BE31DAE045000B56070 /* Mosaic.cikernel */; };
 		3B429BE61DAE06E400B56070 /* mosaic_asset_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B429BE51DAE06E400B56070 /* mosaic_asset_1.png */; };
 		3B429BE81DAE070300B56070 /* mosaicImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B429BE71DAE070300B56070 /* mosaicImage.jpg */; };
+		3B67C1BE20EBA5E600694AA5 /* MetalKernelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B67C1BD20EBA5E600694AA5 /* MetalKernelViewController.m */; };
+		3B67C1C020EBA60F00694AA5 /* Vignette.metal in Sources */ = {isa = PBXBuildFile; fileRef = 3B67C1BF20EBA60F00694AA5 /* Vignette.metal */; };
+		3B67C1C320EBA63F00694AA5 /* MetalKernelFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B67C1C220EBA63F00694AA5 /* MetalKernelFilter.m */; };
 		3B7B0CD41DAD2337009FF36C /* PixellateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7B0CD31DAD2337009FF36C /* PixellateViewController.m */; };
 		3B7B0CD71DAD2349009FF36C /* PixellateFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7B0CD61DAD2349009FF36C /* PixellateFilter.m */; };
 		3B7B0CD91DAD235B009FF36C /* Pixellate.cikernel in Resources */ = {isa = PBXBuildFile; fileRef = 3B7B0CD81DAD235B009FF36C /* Pixellate.cikernel */; };
@@ -48,6 +51,11 @@
 		3B429BE31DAE045000B56070 /* Mosaic.cikernel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Mosaic.cikernel; sourceTree = "<group>"; };
 		3B429BE51DAE06E400B56070 /* mosaic_asset_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mosaic_asset_1.png; sourceTree = "<group>"; };
 		3B429BE71DAE070300B56070 /* mosaicImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mosaicImage.jpg; sourceTree = "<group>"; };
+		3B67C1BC20EBA5E600694AA5 /* MetalKernelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetalKernelViewController.h; sourceTree = "<group>"; };
+		3B67C1BD20EBA5E600694AA5 /* MetalKernelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MetalKernelViewController.m; sourceTree = "<group>"; };
+		3B67C1BF20EBA60F00694AA5 /* Vignette.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Vignette.metal; sourceTree = "<group>"; };
+		3B67C1C120EBA63F00694AA5 /* MetalKernelFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetalKernelFilter.h; sourceTree = "<group>"; };
+		3B67C1C220EBA63F00694AA5 /* MetalKernelFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MetalKernelFilter.m; sourceTree = "<group>"; };
 		3B7B0CD21DAD2337009FF36C /* PixellateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PixellateViewController.h; sourceTree = "<group>"; };
 		3B7B0CD31DAD2337009FF36C /* PixellateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PixellateViewController.m; sourceTree = "<group>"; };
 		3B7B0CD51DAD2349009FF36C /* PixellateFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PixellateFilter.h; sourceTree = "<group>"; };
@@ -96,6 +104,7 @@
 		3B384E3E1DACCF5800E5A40E /* CoreImageDemo */ = {
 			isa = PBXGroup;
 			children = (
+				3B67C1BB20EBA5C300694AA5 /* MetalKernel */,
 				3B429BDC1DAE040800B56070 /* Mosaic */,
 				3B8916771DACD7BB00262F26 /* Pixellate */,
 				3B8916781DACD7BB00262F26 /* Vignette */,
@@ -133,6 +142,18 @@
 				3B429BE31DAE045000B56070 /* Mosaic.cikernel */,
 			);
 			path = Mosaic;
+			sourceTree = "<group>";
+		};
+		3B67C1BB20EBA5C300694AA5 /* MetalKernel */ = {
+			isa = PBXGroup;
+			children = (
+				3B67C1BF20EBA60F00694AA5 /* Vignette.metal */,
+				3B67C1BC20EBA5E600694AA5 /* MetalKernelViewController.h */,
+				3B67C1BD20EBA5E600694AA5 /* MetalKernelViewController.m */,
+				3B67C1C120EBA63F00694AA5 /* MetalKernelFilter.h */,
+				3B67C1C220EBA63F00694AA5 /* MetalKernelFilter.m */,
+			);
+			path = MetalKernel;
 			sourceTree = "<group>";
 		};
 		3B8916771DACD7BB00262F26 /* Pixellate */ = {
@@ -249,13 +270,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B67C1C320EBA63F00694AA5 /* MetalKernelFilter.m in Sources */,
 				3B89167E1DACD7FA00262F26 /* VignetteFilter.m in Sources */,
+				3B67C1C020EBA60F00694AA5 /* Vignette.metal in Sources */,
 				3B89167B1DACD7D800262F26 /* VignetteViewController.m in Sources */,
 				3B384E581DACD04200E5A40E /* MainTableViewController.m in Sources */,
 				3B429BDF1DAE041C00B56070 /* MosaicFilter.m in Sources */,
 				3B7B0CD41DAD2337009FF36C /* PixellateViewController.m in Sources */,
 				3B429BE21DAE043500B56070 /* MosaicViewController.m in Sources */,
 				3B7B0CD71DAD2349009FF36C /* PixellateFilter.m in Sources */,
+				3B67C1BE20EBA5E600694AA5 /* MetalKernelViewController.m in Sources */,
 				3B384E441DACCF5800E5A40E /* AppDelegate.m in Sources */,
 				3B384E411DACCF5800E5A40E /* main.m in Sources */,
 			);
@@ -381,7 +405,10 @@
 				DEVELOPMENT_TEAM = 55C567ZLGU;
 				INFOPLIST_FILE = CoreImageDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Colin.CoreImageDemo;
+				MTLLINKER_FLAGS = "-cikernel";
+				MTL_COMPILER_FLAGS = "-fcikernel";
+				MTL_PREPROCESSOR_DEFINITIONS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Colin.MetalDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -394,7 +421,10 @@
 				DEVELOPMENT_TEAM = 55C567ZLGU;
 				INFOPLIST_FILE = CoreImageDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Colin.CoreImageDemo;
+				MTLLINKER_FLAGS = "-cikernel";
+				MTL_COMPILER_FLAGS = "-fcikernel";
+				MTL_PREPROCESSOR_DEFINITIONS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Colin.MetalDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
